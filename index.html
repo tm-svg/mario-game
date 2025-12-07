@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">Score:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Coins:</span>
+                    <span id="coins">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Lives:</span>
+                    <span id="lives">3</span>
+                </div>
+            </div>
+            <button id="startBtn" class="game-btn">Start Game</button>
+            <button id="pauseBtn" class="game-btn" disabled>Pause</button>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+        
+        <!-- Mobile Controls -->
+        <div class="mobile-controls">
+            <div class="mobile-buttons">
+                <button class="mobile-btn" id="leftBtn">←</button>
+                <button class="mobile-btn" id="jumpBtn">↑</button>
+                <button class="mobile-btn" id="rightBtn">→</button>
+            </div>
+        </div>
+        
+        <div class="game-info">
+            <div class="controls">
+                <h3>Controls</h3>
+                <p><strong>A / Left Arrow:</strong> Move Left</p>
+                <p><strong>D / Right Arrow:</strong> Move Right</p>
+                <p><strong>W / Space / Up Arrow:</strong> Jump</p>
+                <p class="mobile-only"><strong>Touch buttons below for mobile</strong></p>
+            </div>
+            <div id="gameOver" class="game-over hidden">
+                <h2>Game Over!</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <button id="restartBtn" class="game-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
